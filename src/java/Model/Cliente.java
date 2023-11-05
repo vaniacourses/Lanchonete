@@ -10,21 +10,21 @@ package Model;
  * @author kener_000
  */
 public class Cliente {
-    private int id_cliente;
+    private int idCliente;
     private String nome;
     private String sobrenome;
     private String telefone;
     private String usuario;
     private String senha;
-    private int fg_ativo;
+    private int fgAtivo;
     private Endereco endereco;
 
-    public int getId_cliente() {
-        return id_cliente;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getNome() {
@@ -67,12 +67,12 @@ public class Cliente {
         this.senha = senha;
     }
 
-    public int getFg_ativo() {
-        return fg_ativo;
+    public int getFgAtivo() {
+        return fgAtivo;
     }
 
-    public void setFg_ativo(int fg_ativo) {
-        this.fg_ativo = fg_ativo;
+    public void setFgAtivo(int fgAtivo) {
+        this.fgAtivo = fgAtivo;
     }
 
     public Endereco getEndereco() {
@@ -83,13 +83,12 @@ public class Cliente {
         this.endereco = endereco;
     }
     
+    private static final String BREAKLINE = " <br>";
     public String resumo(){
-        String string = "Nome: "+this.nome+" "+this.sobrenome+" <br>"
-                + "Telefone: "+this.telefone+" <br>"
-                + "Usuario: "+this.usuario+" <br>"
+        return "Nome: "+this.nome+" "+this.sobrenome+ BREAKLINE
+                + "Telefone: "+this.telefone+ BREAKLINE
+                + "Usuario: "+this.usuario+ BREAKLINE
                 + "Senha: "+this.senha;
-        
-        return string;
-    }
+        }
     
 }

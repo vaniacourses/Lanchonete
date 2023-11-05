@@ -56,7 +56,7 @@ public class getCliente extends HttpServlet {
             String ID = validar.getCookieIdCliente(cookies);
            
             Cliente cliente = clienteDao.pesquisaPorID(ID);
-            Endereco endereco = enderecoDao.pesquisarEnderecoPorID(cliente.getId_cliente());
+            Endereco endereco = enderecoDao.pesquisarEnderecoPorID(cliente.getIdCliente());
             
             Object[] arr = new Object[2];
             arr[0] = cliente;

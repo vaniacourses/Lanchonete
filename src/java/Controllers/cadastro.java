@@ -75,7 +75,7 @@ public class cadastro extends HttpServlet {
             cliente.setTelefone(dados.getJSONObject("usuario").getString("telefone"));
             cliente.setUsuario(dados.getJSONObject("usuario").getString("usuario"));
             cliente.setSenha(dados.getJSONObject("usuario").getString("senha"));
-            cliente.setFg_ativo(1);
+            cliente.setFgAtivo(1);
             
             //E Para finalizar, salva no Banco usando o DAO deles
             cliente.setEndereco(endereco);

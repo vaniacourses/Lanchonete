@@ -70,7 +70,7 @@ public class login extends HttpServlet {
             if(resultado == true){
                 Cliente clienteCompleto = clienteDAO.pesquisaPorUsuario(cliente);
                 
-                Cookie cookie = new Cookie("token", clienteCompleto.getId_cliente()+"-"+Instant.now().toString());
+                Cookie cookie = new Cookie("token", clienteCompleto.getIdCliente()+"-"+Instant.now().toString());
                 tokenDAO.salvar(cookie.getValue());
                 cookie.setMaxAge(30*60);
                 response.addCookie(cookie);

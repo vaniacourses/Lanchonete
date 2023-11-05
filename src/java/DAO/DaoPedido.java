@@ -30,7 +30,7 @@ public class DaoPedido {
         
         try{
             PreparedStatement stmt = conecta.prepareStatement(sql);
-            stmt.setInt(1, pedido.getCliente().getId_cliente());
+            stmt.setInt(1, pedido.getCliente().getIdCliente());
             stmt.setString(2, pedido.getData_pedido());
             stmt.setDouble(3, pedido.getValor_total());
             

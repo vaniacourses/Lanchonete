@@ -46,7 +46,7 @@ public class DaoCliente {
             stmt.setString(3, cliente.getTelefone());
             stmt.setString(4, cliente.getUsuario());
             stmt.setString(5, cliente.getSenha());
-            stmt.setInt(6, cliente.getFg_ativo());
+            stmt.setInt(6, cliente.getFgAtivo());
             DaoEndereco dend = new DaoEndereco();
             if(dend.validaEndereco(cliente.getEndereco()) == 0){
                 dend.salvar(cliente.getEndereco());
@@ -76,13 +76,13 @@ public class DaoCliente {
             while (rs.next()){
             
                 Cliente cliente = new Cliente();
-                cliente.setId_cliente(rs.getInt(IDCLIENTE));
+                cliente.setIdCliente(rs.getInt(IDCLIENTE));
                 cliente.setNome(rs.getString(NOME));
                 cliente.setSobrenome(rs.getString(SOBRENOME));
                 cliente.setTelefone(rs.getString(TELEFONE));
                 cliente.setUsuario(rs.getString(USUARIO));
                 cliente.setSenha(rs.getString(SENHA));
-                cliente.setFg_ativo(1);
+                cliente.setFgAtivo(1);
                 
                 clientes.add(cliente);
             }
@@ -110,13 +110,13 @@ public class DaoCliente {
             
             while (rs.next()){
             
-                clienteResultado.setId_cliente(rs.getInt(IDCLIENTE));
+                clienteResultado.setIdCliente(rs.getInt(IDCLIENTE));
                 clienteResultado.setNome(rs.getString(NOME));
                 clienteResultado.setSobrenome(rs.getString(SOBRENOME));
                 clienteResultado.setTelefone(rs.getString(TELEFONE));
                 clienteResultado.setUsuario(rs.getString(USUARIO));
                 clienteResultado.setSenha(rs.getString(SENHA));
-                clienteResultado.setFg_ativo(1);
+                clienteResultado.setFgAtivo(1);
 
             }
             rs.close();
@@ -141,11 +141,11 @@ public class DaoCliente {
             rs = stmt.executeQuery();
             
             while (rs.next()){
-                clienteResultado.setId_cliente(rs.getInt(IDCLIENTE));
+                clienteResultado.setIdCliente(rs.getInt(IDCLIENTE));
                 clienteResultado.setNome(rs.getString(NOME));
                 clienteResultado.setSobrenome(rs.getString(SOBRENOME));
                 clienteResultado.setTelefone(rs.getString(TELEFONE));
-                clienteResultado.setFg_ativo(1);
+                clienteResultado.setFgAtivo(1);
             }
             rs.close();
             stmt.close();
@@ -173,11 +173,11 @@ public class DaoCliente {
             while (rs.next()){    
                 validCliente.setUsuario(rs.getString(USUARIO));
                 validCliente.setSenha(rs.getString(SENHA));
-                validCliente.setFg_ativo(rs.getInt("fg_ativo"));
+                validCliente.setFgAtivo(rs.getInt("fg_ativo"));
             }
             
             rs.close();           
-            return ((validCliente.getFg_ativo() == 1) && (md5.encryptar(cliente.getSenha()).equals(validCliente.getSenha())));
+            return ((validCliente.getFgAtivo() == 1) && (md5.encryptar(cliente.getSenha()).equals(validCliente.getSenha())));
             
         } catch(SQLException e){
             JOptionPane.showMessageDialog(null, e);
