@@ -66,7 +66,7 @@ public class DaoCliente {
     public List<Cliente> listarTodos(){
         String sql = "SELECT * FROM tb_clientes WHERE fg_Ativo='1' ORDER BY " + IDCLIENTE;
         ResultSet rs;
-        List<Cliente> clientes = new ArrayList<Cliente>();
+        List<Cliente> clientes = new ArrayList<>();
         
         try{
             
@@ -130,8 +130,8 @@ public class DaoCliente {
         
     }
     
-    public Cliente pesquisaPorID(String ID){
-        String sql = "SELECT * FROM tb_clientes WHERE " + IDCLIENTE + "='"+ID+"'";
+    public Cliente pesquisaPorID(String clientId){
+        String sql = "SELECT * FROM tb_clientes WHERE " + IDCLIENTE + "='"+clientId+"'";
         ResultSet rs;
         Cliente clienteResultado = new Cliente();
         
@@ -176,14 +176,8 @@ public class DaoCliente {
                 validCliente.setFg_ativo(rs.getInt("fg_ativo"));
             }
             
-            rs.close();
-            stmt.close();
-            
-            if((md5.encryptar(cliente.getSenha()).equals(validCliente.getSenha())) && (validCliente.getFg_ativo() == 1)){
-                return true;
-            } else { 
-                return false; 
-            }
+            rs.close();           
+            return ((validCliente.getFg_ativo() == 1) && (md5.encryptar(cliente.getSenha()).equals(validCliente.getSenha())));
             
         } catch(SQLException e){
             JOptionPane.showMessageDialog(null, e);
