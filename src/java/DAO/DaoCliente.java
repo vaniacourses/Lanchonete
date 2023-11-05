@@ -26,9 +26,14 @@ public class DaoCliente {
         this.conecta = new DaoUtil().conecta();
     }
     
+    private static final String IDCLIENTE ="id_cliente";
+    private static final String NOME = "nome";
+    private static final String SOBRENOME = "sobrenome";
+    private static final String TELEFONE = "telefone";
+    private static final String USUARIO = "usuario";
+    private static final String SENHA = "senha";
+    
     public void salvar(Cliente cliente){
-        //String sql = "INSERT INTO tb_clientes(nome, sobrenome, telefone, usuario, senha, fg_ativo, id_endereco) "
-        //        + "VALUES(?,?,?,?,?,?,?)";
         String sql = "INSERT INTO tb_clientes(nome, sobrenome, telefone, usuario, senha, fg_ativo, id_endereco) "
                   + "VALUES(?,?,?,?, MD5(?),?,?)";
         
@@ -56,9 +61,9 @@ public class DaoCliente {
             throw new RuntimeException(e);
         }
     }
-    
+              
     public List<Cliente> listarTodos(){
-        String sql = "SELECT * FROM tb_clientes WHERE fg_Ativo='1' ORDER BY id_cliente";
+        String sql = "SELECT * FROM tb_clientes WHERE fg_Ativo='1' ORDER BY " + IDCLIENTE;
         ResultSet rs;
         List<Cliente> clientes = new ArrayList<Cliente>();
         
@@ -70,12 +75,12 @@ public class DaoCliente {
             while (rs.next()){
             
                 Cliente cliente = new Cliente();
-                cliente.setId_cliente(rs.getInt("id_cliente"));
-                cliente.setNome(rs.getString("nome"));
-                cliente.setSobrenome(rs.getString("sobrenome"));
-                cliente.setTelefone(rs.getString("telefone"));
-                cliente.setUsuario(rs.getString("usuario"));
-                cliente.setSenha(rs.getString("senha"));
+                cliente.setId_cliente(rs.getInt(IDCLIENTE));
+                cliente.setNome(rs.getString(NOME));
+                cliente.setSobrenome(rs.getString(SOBRENOME));
+                cliente.setTelefone(rs.getString(TELEFONE));
+                cliente.setUsuario(rs.getString(USUARIO));
+                cliente.setSenha(rs.getString(SENHA));
                 cliente.setFg_ativo(1);
                 
                 clientes.add(cliente);
@@ -104,12 +109,12 @@ public class DaoCliente {
             
             while (rs.next()){
             
-                clienteResultado.setId_cliente(rs.getInt("id_cliente"));
-                clienteResultado.setNome(rs.getString("nome"));
-                clienteResultado.setSobrenome(rs.getString("sobrenome"));
-                clienteResultado.setTelefone(rs.getString("telefone"));
-                clienteResultado.setUsuario(rs.getString("usuario"));
-                clienteResultado.setSenha(rs.getString("senha"));
+                clienteResultado.setId_cliente(rs.getInt(IDCLIENTE));
+                clienteResultado.setNome(rs.getString(NOME));
+                clienteResultado.setSobrenome(rs.getString(SOBRENOME));
+                clienteResultado.setTelefone(rs.getString(TELEFONE));
+                clienteResultado.setUsuario(rs.getString(USUARIO));
+                clienteResultado.setSenha(rs.getString(SENHA));
                 clienteResultado.setFg_ativo(1);
 
             }
@@ -126,7 +131,7 @@ public class DaoCliente {
     }
     
     public Cliente pesquisaPorID(String ID){
-        String sql = "SELECT * FROM tb_clientes WHERE id_cliente='"+ID+"'";
+        String sql = "SELECT * FROM tb_clientes WHERE " + IDCLIENTE + "='"+ID+"'";
         ResultSet rs;
         Cliente clienteResultado = new Cliente();
         
@@ -136,10 +141,10 @@ public class DaoCliente {
             rs = stmt.executeQuery();
             
             while (rs.next()){
-                clienteResultado.setId_cliente(rs.getInt("id_cliente"));
-                clienteResultado.setNome(rs.getString("nome"));
-                clienteResultado.setSobrenome(rs.getString("sobrenome"));
-                clienteResultado.setTelefone(rs.getString("telefone"));
+                clienteResultado.setId_cliente(rs.getInt(IDCLIENTE));
+                clienteResultado.setNome(rs.getString(NOME));
+                clienteResultado.setSobrenome(rs.getString(SOBRENOME));
+                clienteResultado.setTelefone(rs.getString(TELEFONE));
                 clienteResultado.setFg_ativo(1);
             }
             rs.close();
@@ -166,8 +171,8 @@ public class DaoCliente {
             EncryptadorMD5 md5 = new EncryptadorMD5();
             
             while (rs.next()){    
-                validCliente.setUsuario(rs.getString("usuario"));
-                validCliente.setSenha(rs.getString("senha"));
+                validCliente.setUsuario(rs.getString(USUARIO));
+                validCliente.setSenha(rs.getString(SENHA));
                 validCliente.setFg_ativo(rs.getInt("fg_ativo"));
             }
             
