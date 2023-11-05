@@ -42,7 +42,7 @@ public class getIngredientesPorLancheCliente extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));){
         String IncomingJson = "";
         boolean resultado = true;
         
@@ -68,7 +68,10 @@ public class getIngredientesPorLancheCliente extends HttpServlet {
             out.println("erro");
             }
         }
+    }  catch(Exception e){
+        throw new RuntimeException(e);
     }
+}
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

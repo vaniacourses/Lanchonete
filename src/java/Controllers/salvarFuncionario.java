@@ -41,7 +41,7 @@ public class salvarFuncionario extends HttpServlet {
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));){
         String json = "";
         String ID = "1";
         ////////Validar Cookie
@@ -82,6 +82,9 @@ public class salvarFuncionario extends HttpServlet {
             try (PrintWriter out = response.getWriter()) {
             out.println("erro");
         }
+    }
+            }  catch(Exception e){
+        throw new RuntimeException(e);
     }
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

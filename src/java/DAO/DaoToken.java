@@ -43,8 +43,8 @@ public class DaoToken {
     public boolean validar(String token){
         String sql = "SELECT token FROM tb_tokens WHERE token = ?";
         boolean resultado = false;
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
+            
             stmt.setString(1, token);
         
             ResultSet rs;
@@ -69,8 +69,8 @@ public class DaoToken {
     public void remover(String token){
         String sql = "DELETE FROM tb_tokens WHERE token = ?";
         
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
+            
             stmt.setString(1, token);
             stmt.execute();
             stmt.close();
@@ -84,8 +84,8 @@ public class DaoToken {
     public void LimparTabela(){
         String sql = "DELETE FROM tb_tokens";
         
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
+            
             stmt.execute();
             stmt.close();
             

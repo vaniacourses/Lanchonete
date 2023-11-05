@@ -53,8 +53,7 @@ public class DaoEndereco {
                 + "AND cidade = ? "
                 + "AND estado = ? ";
         Endereco end = new Endereco();
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
             stmt.setString(1, endereco.getRua());
             System.out.println(endereco.getRua());
             stmt.setInt(2, endereco.getNumero());
@@ -86,9 +85,9 @@ public class DaoEndereco {
         Endereco resultado = new Endereco();
 
 
-        try{
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
 
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+            
             stmt.setString(1, endereco.getBairro());
             stmt.setString(2, endereco.getRua());
             stmt.setString(3, endereco.getCidade());
@@ -124,9 +123,7 @@ public class DaoEndereco {
         ResultSet rs;
         Endereco resultado = new Endereco();
         
-        try{
-
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
             rs = stmt.executeQuery();
 
             while(rs.next()){
@@ -157,9 +154,7 @@ public class DaoEndereco {
         ResultSet rs;
         Endereco resultado = new Endereco();
         
-        try{
-
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
             rs = stmt.executeQuery();
 
             while(rs.next()){

@@ -43,7 +43,7 @@ public class login extends HttpServlet {
         
         //Pra receber JSONs, é necessario utilizar esse Buffer pra receber os dados,
         //Então tem que ser Feito assim:
-        BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));){
         String json = "";
         boolean resultado = false;
         
@@ -86,7 +86,9 @@ public class login extends HttpServlet {
                 out.println("erro");
             }
             
-
+        }  catch(Exception e){
+            throw new RuntimeException(e);
+        }
         }
     }
 

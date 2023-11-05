@@ -54,7 +54,7 @@ public class comprar extends HttpServlet {
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));){
         String json = "";
         
         ////////Validar Cookie
@@ -134,7 +134,9 @@ public class comprar extends HttpServlet {
             out.println("erro");
         }
         }
-        
+        } catch(Exception e){
+            throw new RuntimeException(e);
+        }
         
     }
 

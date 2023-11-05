@@ -157,8 +157,7 @@ public class DaoCliente {
     public boolean login(Cliente cliente){
         String sql = "SELECT usuario, senha, fg_ativo FROM tb_clientes WHERE usuario = ?";
         
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
             stmt.setString(1, cliente.getUsuario());
         
             ResultSet rs;
@@ -182,7 +181,9 @@ public class DaoCliente {
             
             if((md5.encryptar(cliente.getSenha()).equals(validCliente.getSenha())) && (validCliente.getFg_ativo() == 1)){
                 return true;
-            } else { return false; }
+            } else { 
+                return false; 
+            }
             
         } catch(SQLException e){
             JOptionPane.showMessageDialog(null, e);

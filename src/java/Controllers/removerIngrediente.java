@@ -41,7 +41,7 @@ public class removerIngrediente extends HttpServlet {
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));){
         String json = "";
         
         ////////Validar Cookie
@@ -83,7 +83,9 @@ public class removerIngrediente extends HttpServlet {
         }
         }
         
-        
+            }  catch(Exception e){
+        throw new RuntimeException(e);
+    }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

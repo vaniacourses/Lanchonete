@@ -69,8 +69,7 @@ public class DaoRelatorio {
                 + "from tb_lanches;";*/
         ResultSet rs;
         List<RelatorioLanches> relatorio = new ArrayList<RelatorioLanches>();
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
             rs = stmt.executeQuery();
             while(rs.next()){
                 RelatorioLanches rl = new RelatorioLanches();
@@ -127,8 +126,7 @@ public class DaoRelatorio {
                 "ORDER BY p.id_pedido;";
         List<RelatorioBebidas> relatorio = new ArrayList<RelatorioBebidas>();
         ResultSet rs;
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
             rs = stmt.executeQuery();
             while(rs.next()){
                 RelatorioBebidas rb = new RelatorioBebidas();
@@ -182,8 +180,7 @@ public class DaoRelatorio {
                 "INNER JOIN tb_bebidas_pedido bp ON(b.id_bebida = bp.id_bebida)))AS lucro";
         List<RelatorioGastos> relatorio = new ArrayList<RelatorioGastos>();
         ResultSet rs;
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
             rs = stmt.executeQuery();
             while(rs.next()){
                 RelatorioGastos rg = new RelatorioGastos();

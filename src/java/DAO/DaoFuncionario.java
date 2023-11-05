@@ -84,8 +84,7 @@ public class DaoFuncionario {
     public boolean login(Funcionario funcionario){
         String sql = "SELECT usuario, senha, fg_ativo FROM tb_funcionarios WHERE usuario = ?";
         
-        try{
-            PreparedStatement stmt = conecta.prepareStatement(sql);
+        try(PreparedStatement stmt = conecta.prepareStatement(sql);){
             stmt.setString(1, funcionario.getUsuario());
         
             ResultSet rs;
