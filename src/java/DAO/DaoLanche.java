@@ -79,7 +79,7 @@ public class DaoLanche {
             
             while (rs.next()){
             
-                Lanche lanche = new Lanche();
+                Lanche lanche = new Lanche("X-Salada", 10.0);
                 lanche.setId_lanche(rs.getInt("id_lanche"));
                 lanche.setNome(rs.getString("nm_lanche"));
                 lanche.setDescricao(rs.getString("descricao"));
@@ -103,7 +103,7 @@ public class DaoLanche {
     public Lanche pesquisaPorNome(Lanche lanche){
         String sql = "SELECT * FROM tb_lanches WHERE nm_lanche='"+lanche.getNome()+"'";
         ResultSet rs;
-        Lanche lancheResultado = new Lanche();
+        Lanche lancheResultado = new Lanche("X-Salada", 10.0);
         
         try{
             
@@ -134,7 +134,7 @@ public class DaoLanche {
     public Lanche pesquisaPorNome(String nome){
         String sql = "SELECT * FROM tb_lanches WHERE nm_lanche='"+nome+"'";
         ResultSet rs;
-        Lanche lancheResultado = new Lanche();
+        Lanche lancheResultado = new Lanche("X-Salada", 10.0);
         
         try{
             

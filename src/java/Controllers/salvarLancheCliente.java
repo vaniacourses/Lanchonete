@@ -67,7 +67,7 @@ public class salvarLancheCliente extends HttpServlet {
             
             double precoDoLanche = 0.00;
             
-            Lanche lanche = new Lanche();
+            Lanche lanche = new Lanche("X-Salada", 10.0);
             
             lanche.setNome(dados.getString("nome"));
             lanche.setDescricao(dados.getString("descricao"));

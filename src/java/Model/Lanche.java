@@ -10,6 +10,9 @@ package Model;
  * @author kener_000
  */
 public class Lanche {
+
+    public Lanche(String xSalada, double par) {
+    }
     private int id_lanche;
     private String nome;
     private String descricao;

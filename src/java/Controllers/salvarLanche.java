@@ -65,7 +65,7 @@ public class salvarLanche extends HttpServlet {
             JSONObject dados = new JSONObject(jsonStr);
             JSONObject ingredientes = dados.getJSONObject("ingredientes");
        
-            Lanche lanche = new Lanche();
+            Lanche lanche = new Lanche("X-Salada", 10.0);
             
             lanche.setNome(dados.getString("nome"));
             lanche.setDescricao(dados.getString("descricao"));
