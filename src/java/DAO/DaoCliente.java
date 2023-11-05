@@ -6,6 +6,7 @@
 package DAO;
 
 import Helpers.EncryptadorMD5;
+import Helpers.SpecificException;
 import Model.Cliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -58,7 +59,7 @@ public class DaoCliente {
             
             
         }catch(Exception e){
-            throw new RuntimeException(e);
+            throw new SpecificException("salvar err", e);
         }
     }
               
@@ -92,7 +93,7 @@ public class DaoCliente {
             
         } catch(SQLException e){
             
-             throw new RuntimeException(e);
+            throw new SpecificException("listarTodos err", e);
         }
         
     }
@@ -124,8 +125,7 @@ public class DaoCliente {
         
             
         } catch(SQLException e){
-            
-             throw new RuntimeException(e);
+            throw new SpecificException("pesquisaPorUsuario err", e);
         }
         
     }
@@ -154,7 +154,7 @@ public class DaoCliente {
             
         } catch(SQLException e){
             
-             throw new RuntimeException(e);
+            throw new SpecificException("pesquisaPorID err", e);
         }
         
     }
@@ -178,11 +178,6 @@ public class DaoCliente {
             
             rs.close();
             stmt.close();
-            
-            System.out.println(md5.encryptar(cliente.getSenha()));
-            System.out.println(validCliente.getSenha());
-            
-            System.out.println((md5.encryptar(cliente.getSenha()).equals(validCliente.getSenha())));
             
             if((md5.encryptar(cliente.getSenha()).equals(validCliente.getSenha())) && (validCliente.getFg_ativo() == 1)){
                 return true;
