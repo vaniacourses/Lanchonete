@@ -7,6 +7,10 @@ os pedidos da lanchonete e emitir relatórios. A lanchonete devera permitir o ca
 e o cadastro de produtos, que ficariam por parte do administrador. Após o cadastro,  cliente poderá utilizar os ingredientes cadastrados para 
 criar seu lanche personalizado. O sistema deverá fazer o controle dos pedidos de forma que agrade os clientes, e controlar tambem o estoque de produtos.
 
+## Plano de Teste
+https://docs.google.com/document/d/18b6nZG4giAGkCErUiF8tyY00UHL_bIqWRpSRTONog_Y/edit?usp=sharing
+
+
 ## Tecnologias Utilizadas
 
 O Sistema funciona com base em um Frontend Utilizando HTML 5, CSS3 e JavaScript, e um Backend baseado em Java Web utilizando-se do Servidor Glassfish 4 

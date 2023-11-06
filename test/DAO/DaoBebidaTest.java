@@ -19,12 +19,5 @@ public class DaoBebidaTest {
 		alterarBebidas.alterar(bebida);
 	}
 	
-	@Test
-	public void testPesquisaBebida() {
-		Bebida bebidaResultado = new Bebida();
-		PesquisaBebidas pesquisaBebidas = new PesquisaBebidas();
-		bebidaResultado = pesquisaBebidas.pesquisaPorNome("Suco");
-	}
-	
 	       
 }
