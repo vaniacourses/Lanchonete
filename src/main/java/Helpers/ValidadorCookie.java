@@ -6,14 +6,11 @@
 package Helpers;
 
 import DAO.DaoToken;
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 import javax.servlet.http.Cookie;
 
-/**
- *
- * @author kener_000
- */
+
 public class ValidadorCookie {
     
     public boolean validar(Cookie[] cookies){

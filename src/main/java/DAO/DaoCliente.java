@@ -15,10 +15,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
-/**
- *
- * @author kener_000
- */
+
+
 public class DaoCliente {
 
     private Connection conecta;

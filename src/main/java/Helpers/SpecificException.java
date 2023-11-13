@@ -8,6 +8,8 @@ package Helpers;
  *
  * @author Lucas
  */
+
+
 public class SpecificException extends RuntimeException{
      public SpecificException(String message, Throwable cause) {
              super(message, cause);
