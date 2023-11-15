@@ -83,8 +83,5 @@ public class Ingrediente {
 
     public void setFg_ativo(int fg_ativo) {
         this.fg_ativo = fg_ativo;
-    }
-    
-    
-    
+    }   
 }
