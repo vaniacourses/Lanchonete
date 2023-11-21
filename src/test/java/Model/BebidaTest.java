@@ -7,7 +7,8 @@ import static org.mockito.Mockito.*;
 
 public class BebidaTest {
 	
-	// ---------- TESTE ID BEBIDA ----------------
+	// ========== TESTE ID BEBIDA
+	// ---------- TESTE ID BEBIDA (GET)
 	@Test
     public void testGetId_bebida() {
         Bebida bebida = new Bebida();
@@ -17,12 +18,12 @@ public class BebidaTest {
 	@Test
     public void testGetIdBebidaComMockito() {
         Bebida bebidaMock = mock(Bebida.class);
-        int idBebidaEsperado = 88;
+        int idBebidaEsperado = 1;
         when(bebidaMock.getId_bebida()).thenReturn(idBebidaEsperado);
         int idBebidaObtido = bebidaMock.getId_bebida();
         assertEquals(idBebidaEsperado, idBebidaObtido);
     }
-
+	// ---------- TESTE ID BEBIDA (SET)
 	@Test
     public void testSetId_bebida() {
         Bebida bebida = new Bebida();
@@ -36,8 +37,9 @@ public class BebidaTest {
         bebidaMock.setId_bebida(idBebidaEsperado);
         verify(bebidaMock).setId_bebida(idBebidaEsperado);
     }
-    
-	// ---------- TESTE NOME ---------------------
+	
+	// ========== TESTE NOME
+	// ---------- TESTE NOME (GET)
 	@Test
     public void testGetNome() {
         Bebida refrigerante = new Bebida();
@@ -52,8 +54,7 @@ public class BebidaTest {
         String nomeObtido = bebidaMock.getNome();
         assertEquals(nomeEsperado, nomeObtido);
     }
-	
-
+	// ---------- TESTE NOME (SET)
 	@Test
     public void testSetNome() {
         Bebida refrigerante = new Bebida();
@@ -67,22 +68,39 @@ public class BebidaTest {
         bebidaMock.setNome(nomeEsperado);
         verify(bebidaMock).setNome(nomeEsperado);
     }
-		
-    
-	// ---------- TESTE DESCRICAO ----------------
-    @Test
-    public void testSetDescricao() {
-    	Bebida Dolly = new Bebida();
-    	Dolly.setDescricao("O sabor Brasileiro");
-    }    
+	
+	// ========== TESTE DESCRICAO
+	// ---------- TESTE DESCRICAO (GET)
     @Test
     public void testGetDescricao() {
     	Bebida Dolly = new Bebida();
     	Dolly.setDescricao("O sabor Brasileiro");
     	assertEquals("O sabor Brasileiro", Dolly.getDescricao() );
     }
- 
-    // ---------- TEST QUANTIDADE -------------------
+    @Test
+    public void testGetDescricaoComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        String descricaoEsperada = "Bebida saborosa";
+        when(bebidaMock.getDescricao()).thenReturn(descricaoEsperada);
+        String descricaoObtida = bebidaMock.getDescricao();
+        assertEquals(descricaoEsperada, descricaoObtida);
+    }
+    // ---------- TESTE DESCRICAO (SET)
+    @Test
+    public void testSetDescricao() {
+    	Bebida Dolly = new Bebida();
+    	Dolly.setDescricao("O sabor Brasileiro");
+    }
+    @Test
+    public void testSetDescricaoComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        String descricaoEsperada = "Bebida saborosa";
+        bebidaMock.setDescricao(descricaoEsperada);
+        verify(bebidaMock).setDescricao(descricaoEsperada);
+    }
+    
+    // ========== TESTE QUANTIDADE 
+    // ---------- TESTE QUANTIDADE (GET)
     @Test
     public void testGetQuantidade() {
         Bebida bebida = new Bebida();
@@ -90,27 +108,60 @@ public class BebidaTest {
         assertEquals(10, bebida.getQuantidade());
     }
     @Test
+    public void testGetQuantidadeComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        int quantidadeEsperada = 15;
+        when(bebidaMock.getQuantidade()).thenReturn(quantidadeEsperada);
+        int quantidadeObtida = bebidaMock.getQuantidade();
+        assertEquals(quantidadeEsperada, quantidadeObtida);
+    }
+    // ---------- TEST QUANTIDADE (SET)
+    @Test
     public void testSetQuantidade() {
         Bebida bebida = new Bebida();
         bebida.setQuantidade(10);
         assertEquals(10, bebida.getQuantidade());
     }
-
-    // ---------- TESTE VALOR COMPRA  ----------------
     @Test
-    public void testSetValorCompra() {
+    public void testSetQuantidadeComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        int quantidadeEsperada = 15;
+        bebidaMock.setQuantidade(quantidadeEsperada);
+        verify(bebidaMock).setQuantidade(quantidadeEsperada);
+    }
+    
+    // ========== TESTE VALOR COMPRA
+    // ---------- TESTE VALOR COMPRA (GET)
+    @Test
+    public void testGetValorCompra() {
         Bebida bebida = new Bebida();
         bebida.setValor_compra(5.0);
-
         assertEquals(5.0, bebida.getValor_compra(), 0.01);
     }
+    @Test
+    public void testGetValorCompraComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        double valorCompraEsperado = 8.5;
+        when(bebidaMock.getValor_compra()).thenReturn(valorCompraEsperado);
+        double valorCompraObtido = bebidaMock.getValor_compra();
+        assertEquals(valorCompraEsperado, valorCompraObtido, 0.00);
+    }
+    // ---------- TESTE VALOR COMPRA (SET)
     @Test
     public void testSetValor_compra() {
         Bebida bebida = new Bebida();
         bebida.setValor_compra(10.00);
     }
-
-    // ---------- TESTE VALOR VENDA	----------------
+    @Test
+    public void testSetValorCompraComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        double valorCompraEsperado = 8.5;
+        bebidaMock.setValor_compra(valorCompraEsperado);
+        verify(bebidaMock).setValor_compra(valorCompraEsperado);
+    }
+    
+    // ========== TESTE VALOR VENDA    
+    // ---------- TESTE VALOR VENDA	(GET)
     @Test
     public void testGetValorVenda() {
         Bebida bebida = new Bebida();								// Criação de uma instância de Bebida
@@ -127,6 +178,7 @@ public class BebidaTest {
         double valorVendaObtido = bebidaMock.getValor_venda();
         assertEquals(valorVendaEsperado, valorVendaObtido, 0.01);
     }
+    // ---------- TESTE VALOR VENDA (SET)
     @Test
     public void testSetValor_venda() {
         Bebida bebida = new Bebida();
@@ -139,8 +191,9 @@ public class BebidaTest {
         bebidaMock.setValor_venda(valorVendaEsperado);
         verify(bebidaMock).setValor_venda(valorVendaEsperado);
     }
- 
-    // ---------- TESTE TIPO	----------------
+    
+    // ========== TESTE TIPO
+    // ---------- TESTE TIPO (GET)
     @Test
     public void testGetTipo() {
         Bebida suco = new Bebida();
@@ -148,13 +201,30 @@ public class BebidaTest {
         assertEquals("Suco Natural", suco.getTipo());
     }
     @Test
+    public void testGetTipoComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        String tipoEsperado = "Suco Natural";
+        when(bebidaMock.getTipo()).thenReturn(tipoEsperado);
+        String tipoObtido = bebidaMock.getTipo();
+        assertEquals(tipoEsperado, tipoObtido);
+    }
+    // ---------- TESTE TIPO (SET)
+    @Test
     public void testSetTipo() {
         Bebida bebida = new Bebida();
         bebida.setTipo("Cerveja");
         assertEquals("Cerveja", bebida.getTipo());
     }
-     
-    // ---------- TESTE FG_ATIVO	----------------
+    @Test
+    public void testSetTipoComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        String tipoEsperado = "Cerveja";
+        bebidaMock.setTipo(tipoEsperado);
+        verify(bebidaMock).setTipo(tipoEsperado);
+    }
+    
+    // ========== TESTE FG_ATIVO
+    // ---------- TESTE FG_ATIVO (GET)
     @Test
     public void testGetFg_ativo() {
         Bebida bebida = new Bebida();
@@ -163,9 +233,26 @@ public class BebidaTest {
     } // Este teste verifica se o método getFg_ativo() retorna o valor correto quando o atributo fg_ativo da classe Bebida é definido.
     
     @Test
+    public void testGetFgAtivoComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        int fgAtivoEsperado = 1;
+        when(bebidaMock.getFg_ativo()).thenReturn(fgAtivoEsperado);
+        int fgAtivoObtido = bebidaMock.getFg_ativo();
+        assertEquals(fgAtivoEsperado, fgAtivoObtido);
+    }
+    
+    // ---------- TESTE FG_ATIVO (SET)
+    @Test
     public void testSetFg_ativo() {
         Bebida bebida = new Bebida();
         bebida.setFg_ativo(1);
         assertEquals(1, bebida.getFg_ativo());
     } // Este teste verifica se o método setFg_ativo() altera o valor do atributo fg_ativo da classe Bebida corretamente.
+    @Test
+    public void testSetFgAtivoComMockito() {
+        Bebida bebidaMock = mock(Bebida.class);
+        int fgAtivoEsperado = 1;
+        bebidaMock.setFg_ativo(fgAtivoEsperado);
+        verify(bebidaMock).setFg_ativo(fgAtivoEsperado);
+    }
 }
