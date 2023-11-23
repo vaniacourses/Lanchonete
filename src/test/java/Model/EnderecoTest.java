@@ -5,6 +5,19 @@ import org.junit.Test;
 
 public class EnderecoTest {
 
+	
+	// ========== TESTE ENDERECO COM INFORMACOES PADROES
+    @Test
+    public void testEnderecoPadrao() {
+        Endereco endereco = new Endereco("Rua A", "Bairro A", 10, "Complemento", "Cidade", "Estado");
+        assertEquals("Rua A", endereco.getRua());
+        assertEquals("Bairro A", endereco.getBairro());
+        assertEquals(10, endereco.getNumero());
+        assertEquals("Complemento", endereco.getComplemento());
+        assertEquals("Cidade", endereco.getCidade());
+        assertEquals("Estado", endereco.getEstado());
+    }
+    
 	// ========== TESTE ID ENDERECO
     @Test
     public void testGetSetIdEndereco() {

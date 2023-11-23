@@ -2,8 +2,23 @@ package Model;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import static org.mockito.Mockito.*;
 
 public class ClienteTest {
+
+	
+	// ========== TESTE ENDERECO COM INFORMACOES PADROES
+    @Test
+    public void testEnderecoPadrao() {
+    	Endereco enderecoMock = mock(Endereco.class);
+        Cliente cliente = new Cliente("Nome Do Cliente", "Sobrenome", "5521123456789", "Username", "Senha", 1, enderecoMock);
+        assertEquals("Nome Do Cliente", cliente.getNome());
+        assertEquals("Sobrenome", cliente.getSobrenome());
+        assertEquals("5521123456789", cliente.getTelefone());
+        assertEquals("Username", cliente.getUsuario());
+        assertEquals("Senha", cliente.getSenha());
+        assertEquals(enderecoMock, cliente.getEndereco());
+    }
 
     @Test
     public void testGetSetIdCliente() {

@@ -59,27 +59,27 @@ public class cadastro extends HttpServlet {
             String jsonStr = new String(bytes, UTF_8);            
             JSONObject dados = new JSONObject(jsonStr);
             
+            String rua = dados.getJSONObject("endereco").getString("rua");
+            String bairro = dados.getJSONObject("endereco").getString("bairro");
+            int numero = dados.getJSONObject("endereco").getInt("numero");
+            String complemento = dados.getJSONObject("endereco").getString("complemento");
+            String cidade = dados.getJSONObject("endereco").getString("cidade");
+            String estado = dados.getJSONObject("endereco").getString("estado");
+
             //Aqui, ele Instancia um objeto do Model endereco, e Popula ele com os dados do JSON
-            Endereco endereco = new Endereco();
-            endereco.setBairro(dados.getJSONObject("endereco").getString("bairro"));
-            endereco.setCidade(dados.getJSONObject("endereco").getString("cidade"));
-            endereco.setEstado(dados.getJSONObject("endereco").getString("estado"));
-            endereco.setComplemento(dados.getJSONObject("endereco").getString("complemento"));
-            endereco.setRua(dados.getJSONObject("endereco").getString("rua"));
-            endereco.setNumero(dados.getJSONObject("endereco").getInt("numero"));
+			Endereco endereco = new Endereco(rua, bairro, numero, complemento, cidade,estado);
+            
+			String nome = dados.getJSONObject("usuario").getString("nome");
+            String sobrenome = dados.getJSONObject("usuario").getString("sobrenome");
+            String telefone = dados.getJSONObject("usuario").getString("telefone");
+            String usuario = dados.getJSONObject("usuario").getString("usuario");
+            String senha = dados.getJSONObject("usuario").getString("senha");
             
             //Aqui, ele Instancia um objeto do Model Cliente, e Popula ele com os dados do JSON
-            Cliente cliente = new Cliente();
-            cliente.setNome(dados.getJSONObject("usuario").getString("nome"));
-            cliente.setSobrenome(dados.getJSONObject("usuario").getString("sobrenome"));
-            cliente.setTelefone(dados.getJSONObject("usuario").getString("telefone"));
-            cliente.setUsuario(dados.getJSONObject("usuario").getString("usuario"));
-            cliente.setSenha(dados.getJSONObject("usuario").getString("senha"));
-            cliente.setFgAtivo(1);
+            Cliente cliente = new Cliente(nome, sobrenome, telefone, usuario, senha, 1, endereco);
             
-            //E Para finalizar, salva no Banco usando o DAO deles
-            cliente.setEndereco(endereco);
             
+            //E Para finalizar, salva no Banco usando o DAO deles           
             DaoCliente clienteDAO = new DaoCliente();
             clienteDAO.salvar(cliente);
             
