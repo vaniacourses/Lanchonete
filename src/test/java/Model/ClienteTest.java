@@ -7,9 +7,9 @@ import static org.mockito.Mockito.*;
 public class ClienteTest {
 
 	
-	// ========== TESTE ENDERECO COM INFORMACOES PADROES
+	// ========== TESTE CLIENTE COM INFORMACOES PADROES
     @Test
-    public void testEnderecoPadrao() {
+    public void testClientePadrao() {
     	Endereco enderecoMock = mock(Endereco.class);
         Cliente cliente = new Cliente("Nome Do Cliente", "Sobrenome", "5521123456789", "Username", "Senha", 1, enderecoMock);
         assertEquals("Nome Do Cliente", cliente.getNome());
