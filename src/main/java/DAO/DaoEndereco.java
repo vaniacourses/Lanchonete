@@ -167,6 +167,7 @@ public class DaoEndereco {
                 resultado.setComplemento(rs.getString("complemento"));
                 resultado.setId_endereco(rs.getInt("id_endereco"));
             }
+            
             rs.close();
             stmt.close();
 

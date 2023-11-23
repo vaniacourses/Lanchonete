@@ -10,6 +10,18 @@ public class Cliente {
     private int fgAtivo;
     private Endereco endereco;
 
+    public Cliente() {
+    	
+    }
+    public Cliente(String nome, String sobrenome, String telefone, String usuario, String senha, int fgAtivo, Endereco endereco) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.telefone = telefone;
+        this.usuario = usuario;
+        this.senha = senha;
+        this.fgAtivo= fgAtivo ;
+        this.endereco = endereco;
+    }
     public int getIdCliente() {
         return idCliente;
     }
