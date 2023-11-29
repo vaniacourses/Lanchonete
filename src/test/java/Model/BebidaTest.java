@@ -1,6 +1,7 @@
 package Model;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
@@ -255,4 +256,63 @@ public class BebidaTest {
         bebidaMock.setFg_ativo(fgAtivoEsperado);
         verify(bebidaMock).setFg_ativo(fgAtivoEsperado);
     }
+    
+    // ========== TESTE FUNCIONAL
+    
+    @Test
+    public void CriarBebida1() {
+        Bebida refrigerante = new Bebida();
+
+        // Definindo os valores dos atributos
+        refrigerante.setNome("Coca-Cola");
+        refrigerante.setDescricao("Refrigerante de cola");
+        refrigerante.setQuantidade(20);
+        refrigerante.setValor_compra(2.10);
+        refrigerante.setValor_venda(3.00);
+        refrigerante.setTipo("Refrigerante");
+        refrigerante.setFg_ativo(1);
+
+        // Verificando os valores dos atributos
+        Double valorCompra = refrigerante.getValor_compra();
+        Double valorVenda = refrigerante.getValor_venda();
+        assertEquals("Coca-Cola", refrigerante.getNome());
+        assertEquals("Refrigerante de cola", refrigerante.getDescricao());
+        assertEquals(20, refrigerante.getQuantidade());
+        assertEquals(valorCompra, refrigerante.getValor_compra());
+        assertEquals(valorVenda, refrigerante.getValor_venda());
+        assertEquals("Refrigerante", refrigerante.getTipo());
+        assertEquals(1, refrigerante.getFg_ativo());
+    }
+    
+
+    
+    @Test
+    public void CriarBebida2() {
+        // Cria um objeto da classe Bebida
+        Bebida refrigerante  = new Bebida();
+
+        // Atribui valores aos atributos
+        refrigerante.setId_bebida(1);
+        refrigerante.setNome("Fanta");
+        refrigerante.setDescricao("Fanta Laranja");
+        refrigerante.setQuantidade(15);
+        refrigerante.setValor_compra(1.50);
+        refrigerante.setValor_venda(2.00);
+        refrigerante.setTipo("Refrigerante");
+        refrigerante.setFg_ativo(1);
+
+        // Verifica se os valores dos atributos foram alterados
+        Double valorCompra = refrigerante.getValor_compra();
+        Double valorVenda = refrigerante.getValor_venda();
+        assertEquals(1, refrigerante.getId_bebida());
+        assertEquals("Fanta", refrigerante.getNome());
+        assertEquals("Fanta Laranja", refrigerante.getDescricao());
+        assertEquals(15, refrigerante.getQuantidade());
+        assertEquals(valorCompra, refrigerante.getValor_compra());
+        assertEquals(valorVenda, refrigerante.getValor_venda());
+        assertEquals("Refrigerante", refrigerante.getTipo());
+        assertEquals(1, refrigerante.getFg_ativo());
+    }
+    
+    
 }
