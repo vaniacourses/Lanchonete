@@ -59,25 +59,26 @@ public class cadastro extends HttpServlet {
             String jsonStr = new String(bytes, UTF_8);            
             JSONObject dados = new JSONObject(jsonStr);
             
-            String rua = dados.getJSONObject("endereco").getString("rua");
-            String bairro = dados.getJSONObject("endereco").getString("bairro");
-            int numero = dados.getJSONObject("endereco").getInt("numero");
-            String complemento = dados.getJSONObject("endereco").getString("complemento");
-            String cidade = dados.getJSONObject("endereco").getString("cidade");
-            String estado = dados.getJSONObject("endereco").getString("estado");
-
+            JSONObject end = dados.getJSONObject("endereco");
+            String rua = end.getString("rua");
+            String bairro = end.getString("bairro");
+            int numero = end.getInt("numero");
+            String complemento = end.getString("complemento");
+            String cidade = end.getString("cidade");
+            String estado = end.getString("estado");
+            
             //Aqui, ele Instancia um objeto do Model endereco, e Popula ele com os dados do JSON
 			Endereco endereco = new Endereco(rua, bairro, numero, complemento, cidade,estado);
-            
-			String nome = dados.getJSONObject("usuario").getString("nome");
-            String sobrenome = dados.getJSONObject("usuario").getString("sobrenome");
-            String telefone = dados.getJSONObject("usuario").getString("telefone");
-            String usuario = dados.getJSONObject("usuario").getString("usuario");
-            String senha = dados.getJSONObject("usuario").getString("senha");
+
+			JSONObject usr= dados.getJSONObject("usuario");
+			String nome = usr.getString("nome");
+            String sobrenome = usr.getString("sobrenome");
+            String telefone = usr.getString("telefone");
+            String usuario = usr.getString("usuario");
+            String senha = usr.getString("senha");
             
             //Aqui, ele Instancia um objeto do Model Cliente, e Popula ele com os dados do JSON
             Cliente cliente = new Cliente(nome, sobrenome, telefone, usuario, senha, 1, endereco);
-            
             
             //E Para finalizar, salva no Banco usando o DAO deles           
             DaoCliente clienteDAO = new DaoCliente();

@@ -27,8 +27,8 @@ public class DaoBebidaMutanteScalarVariableReplacement1 {
         this.conecta = new DaoUtil().conecta();
     }
     
-    public void salvar(Bebida bebida){
-        String sql = "INSERT INTO tb_bebidas(nm_bebida, descricao, quantidade, valor_compra, valor_venda,"
+    public void salvar(Bebida bebida) {
+    	String sql = "INSERT INTO tb_bebidas(nm_bebida, descricao, quantidade, valor_compra, valor_venda,"
                 + " tipo, fg_ativo) "
                 + "VALUES(?,?,?,?,?,?,?)";
         
@@ -41,7 +41,7 @@ public class DaoBebidaMutanteScalarVariableReplacement1 {
             stmt.setDouble(5, bebida.getValor_compra());
             /**
             *
-            * Mutante onde compra é repetido, no lugar de venda.
+            * Mutante onde compra ï¿½ repetido, no lugar de venda.
             */
             stmt.setString(6, bebida.getTipo());
             stmt.setInt(7, bebida.getFg_ativo());
