@@ -35,8 +35,7 @@ public class DaoCliente {
     public void salvar(Cliente cliente){
         String sql = "INSERT INTO tb_clientes(nome, sobrenome, telefone, usuario, senha, fg_ativo, id_endereco) "
                   + "VALUES(?,?,?,?, MD5(?),?,?)";
-        
-        
+       
         try{
             PreparedStatement stmt = conecta.prepareStatement(sql);
             stmt.setString(1, cliente.getNome());

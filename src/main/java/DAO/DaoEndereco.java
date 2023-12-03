@@ -21,7 +21,7 @@ public class DaoEndereco {
     public DaoEndereco() {
         this.conecta = new DaoUtil().conecta();
     }
-    
+
     public void salvar(Endereco endereco){
         String sql = "INSERT INTO tb_enderecos(rua, bairro, numero, complemento, cidade, estado) "
                 + "VALUES(?,?,?,?,?,?)";
