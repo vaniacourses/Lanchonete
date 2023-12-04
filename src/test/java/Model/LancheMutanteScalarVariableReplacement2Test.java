@@ -1,18 +1,16 @@
 package Model;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class LancheTest {
-
-    private Lanche lanche;
+public class LancheMutanteScalarVariableReplacement2Test {
+	private LancheMutanteScalarVariableReplacement2 lanche;
 
     @Before
     public void iniciar() {
-        lanche = new Lanche("X-Salada", 10.0); 
+        lanche = new LancheMutanteScalarVariableReplacement2("X-Salada", 10.0); 
     }
 
     @Test
@@ -56,5 +54,6 @@ public class LancheTest {
         lanche.setQuantidade(2);
         assertEquals(2, lanche.getQuantidade());
     }
+
 }
 

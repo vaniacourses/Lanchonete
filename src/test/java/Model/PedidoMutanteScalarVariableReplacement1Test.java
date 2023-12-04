@@ -5,14 +5,14 @@ import static org.mockito.Mockito.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PedidoTest {
+public class PedidoMutanteScalarVariableReplacement1Test {
 
-    private Pedido pedido;
+    private PedidoMutanteScalarVariableReplacement1 pedido;
     private Cliente cliente;
 
     @Before
     public void iniciar() {
-        pedido = new Pedido();
+        pedido = new PedidoMutanteScalarVariableReplacement1();
         cliente = mock(Cliente.class);
     }
 
@@ -67,4 +67,3 @@ public class PedidoTest {
         assertEquals(150.0, pedido.getValor_total(), 0.001);
     }
 }
-
