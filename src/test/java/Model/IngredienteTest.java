@@ -1,14 +1,13 @@
 package Model;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
-import org.junit.Before;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class IngredienteTest {
  
 	private Ingrediente ingrediente;
-	@Before
+	@BeforeEach
 	public void criarIngrediente() {
 		ingrediente = new Ingrediente();
 	}

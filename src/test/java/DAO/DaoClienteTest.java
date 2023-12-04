@@ -1,9 +1,10 @@
 package DAO;
 import java.util.List;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+  
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import Model.Cliente;
 import Model.Endereco;
@@ -13,7 +14,7 @@ class DaoClienteTest {
 	private Cliente cliente;
     private DaoCliente daoCliente;
 
-	@BeforeEach
+    @BeforeEach
 	void setUp() throws Exception {
         daoCliente = new DaoCliente();
 	}

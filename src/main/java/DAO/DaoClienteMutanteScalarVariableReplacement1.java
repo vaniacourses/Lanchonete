@@ -41,7 +41,7 @@ public class DaoClienteMutanteScalarVariableReplacement1 {
             PreparedStatement stmt = conecta.prepareStatement(sql);
             /**
             *
-            * Mutante onde nome é repetido, no lugar dos demais atributos que também são strings.
+            * Mutante onde nome  repetido, no lugar dos demais atributos que tambm so strings.
             */
             stmt.setString(1, cliente.getNome());
             stmt.setString(2, cliente.getNome());
@@ -175,7 +175,7 @@ public class DaoClienteMutanteScalarVariableReplacement1 {
             while (rs.next()){    
             	 /**
                 *
-                * Aqui Usuário é repetido, no lugar de senha.
+                * Aqui Usurio  repetido, no lugar de senha.
                 */
                 validCliente.setUsuario(rs.getString(USUARIO));
                 validCliente.setUsuario(rs.getString(USUARIO));

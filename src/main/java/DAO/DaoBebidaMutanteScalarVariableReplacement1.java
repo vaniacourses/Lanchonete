@@ -41,7 +41,7 @@ public class DaoBebidaMutanteScalarVariableReplacement1 {
             stmt.setDouble(5, bebida.getValor_compra());
             /**
             *
-            * Mutante onde compra é repetido, no lugar de venda.
+            * Mutante onde compra repetido, no lugar de venda.
             */
             stmt.setString(6, bebida.getTipo());
             stmt.setInt(7, bebida.getFg_ativo());

@@ -1,14 +1,15 @@
 package Model;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+
 
 public class LancheMutanteScalarVariableReplacement1Test {
 	private LancheMutanteScalarVariableReplacement1 lanche;
 
-    @Before
+    @BeforeEach
     public void iniciar() {
         lanche = new LancheMutanteScalarVariableReplacement1("X-Salada", 10.0); 
     }

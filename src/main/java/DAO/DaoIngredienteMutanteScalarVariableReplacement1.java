@@ -34,7 +34,7 @@ public class DaoIngredienteMutanteScalarVariableReplacement1 {
             PreparedStatement stmt = conecta.prepareStatement(sql);
             /**
             *
-            * Aqui nome é repetido no lugar de descricao, que também é uma string.
+            * Aqui nome  repetido no lugar de descricao, que tambm  uma string.
             */
             stmt.setString(1, ingrediente.getNome());
             stmt.setString(2, ingrediente.getNome());
@@ -69,7 +69,7 @@ public class DaoIngredienteMutanteScalarVariableReplacement1 {
                 ingrediente.setId_ingrediente(rs.getInt("id_ingrediente"));
                 /**
                 *
-                * Aqui nome é repetido no lugar de descricao, que também é uma string.
+                * Aqui nome  repetido no lugar de descricao, que tambm  uma string.
                 */
                 ingrediente.setNome(rs.getString("nm_ingrediente"));
                 ingrediente.setNome(rs.getString("descricao"));
@@ -116,7 +116,7 @@ public class DaoIngredienteMutanteScalarVariableReplacement1 {
                 ingrediente.setId_ingrediente(rs.getInt("id_ingrediente"));
                 /**
                 *
-                * Aqui nome é repetido no lugar de descricao, que também é uma string.
+                * Aqui nome  repetido no lugar de descricao, que tambm  uma string.
                 */
                 ingrediente.setNome(rs.getString("nm_ingrediente"));
                 ingrediente.setNome(rs.getString("descricao"));
@@ -149,7 +149,7 @@ public class DaoIngredienteMutanteScalarVariableReplacement1 {
             PreparedStatement stmt = conecta.prepareStatement(sql);
             /**
             *
-            * Aqui nome é repetido no lugar de descricao, que também é uma string.
+            * Aqui nome  repetido no lugar de descricao, que tambm  uma string.
             */
             stmt.setString(1, ingrediente.getNome());
             stmt.setString(2, ingrediente.getNome());
@@ -202,7 +202,7 @@ public class DaoIngredienteMutanteScalarVariableReplacement1 {
                 ingredienteResultado.setId_ingrediente(rs.getInt("id_ingrediente"));
                 /**
                 *
-                * Aqui nome é repetido no lugar de descricao, que também é uma string.
+                * Aqui nome  repetido no lugar de descricao, que tambm  uma string.
                 */
                 ingredienteResultado.setNome(rs.getString("nm_ingrediente"));
                 ingredienteResultado.setNome(rs.getString("descricao"));

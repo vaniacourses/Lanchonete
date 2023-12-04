@@ -94,7 +94,7 @@ public class DaoPedidoMutanteConditionalOperatorReplacement1 {
             rs = stmt.executeQuery();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while (!rs.next()){
             

@@ -23,7 +23,7 @@ public class RelatorioGastosMutanteScalarVariableReplacement1 {
         this.custo = custo;
     }
     
-  //Custo é repetido para gets e sets de Venda e Lucro que também são float.
+  //Custo  repetido para gets e sets de Venda e Lucro que tambm so float.
 
     public float getVenda() {
         return custo;

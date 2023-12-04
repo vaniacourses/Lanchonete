@@ -1,9 +1,6 @@
+package Model;
 
-
-
-
-
-import org.junit.Assert;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -49,7 +46,7 @@ class SeleniumTest2 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(NOME)));
 
         WebElement lancheInput = driver.findElement(By.id(NOME));
-        Assert.assertTrue("Lanche input field is disabled", lancheInput.isEnabled());
+        assertTrue(lancheInput.isEnabled(), "Lanche input field is disabled");
         
 
         WebElement submitButton = driver.findElement(By.name("Adicionar"));
@@ -69,12 +66,12 @@ class SeleniumTest2 {
         
    	 
         WebElement descricaoTextarea = driver.findElement(By.id(DESCRICAO));
-        Assert.assertTrue("Descrição textarea is disabled", descricaoTextarea.isEnabled());
+        assertTrue(descricaoTextarea.isEnabled(), "Descricao textarea is disabled");
         
 
 
         WebElement selectPao = driver.findElement(By.id(TIPO));
-        Assert.assertTrue("SelectPao dropdown is disabled", selectPao.isEnabled());
+        assertTrue(selectPao.isEnabled(), "SelectPao dropdown is disabled");
 
 
         WebElement submitButton = driver.findElement(By.name("Adicionar"));
@@ -92,7 +89,7 @@ class SeleniumTest2 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(NOME)));
 
         WebElement selectPao = driver.findElement(By.id(TIPO));
-        Assert.assertTrue("SelectPao dropdown is disabled", selectPao.isEnabled());
+        assertTrue(selectPao.isEnabled(), "SelectPao dropdown is disabled");
 
 
         WebElement submitButton = driver.findElement(By.name("Adicionar"));
@@ -109,7 +106,7 @@ class SeleniumTest2 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(NOME)));
 
         WebElement lancheInput = driver.findElement(By.id(NOME));
-        Assert.assertTrue("Lanche input field is not visible", lancheInput.isDisplayed());
+        assertTrue(lancheInput.isDisplayed(), "Lanche input field is not visible");
         
 
         WebElement submitButton = driver.findElement(By.name("Adicionar"));
@@ -129,12 +126,12 @@ class SeleniumTest2 {
         
    	 
         WebElement descricaoTextarea = driver.findElement(By.id(DESCRICAO));
-        Assert.assertTrue("Descrição textarea is not visible", descricaoTextarea.isDisplayed());
+        assertTrue(descricaoTextarea.isDisplayed(), "Descricao textarea is not visible");
         
 
 
         WebElement selectPao = driver.findElement(By.id(TIPO));
-        Assert.assertTrue("SelectPao dropdown is disabled", selectPao.isEnabled());
+        assertTrue(selectPao.isEnabled(), "SelectPao dropdown is disabled");
 
 
         WebElement submitButton = driver.findElement(By.name("Adicionar"));
@@ -153,7 +150,7 @@ class SeleniumTest2 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(NOME)));
 
         WebElement selectPao = driver.findElement(By.id(TIPO));
-        Assert.assertTrue("SelectPao dropdown is not visible", selectPao.isDisplayed());
+        assertTrue(selectPao.isDisplayed(), "SelectPao dropdown is not visible");
 
 
         WebElement submitButton = driver.findElement(By.name("Adicionar"));
@@ -219,14 +216,14 @@ class SeleniumTest2 {
 	                    		+ "                        </div>\r\n"
 	                    		+ "                        <div class=\"containerInputSelect\">\r\n"
 	                    		+ "                            <input id=\"nomeLanche\" class=\"TextInput\" name=\"nome\" placeholder=\"Lanche\" required/>\r\n"
-	                    		+ "                            <textarea id=\"textArea3\" class=\"TextInput\"  placeholder=\"Descrição\" rows=\"4\" cols=\"50\" name=\"descricao\"></textarea>\r\n"
+	                    		+ "                            <textarea id=\"textArea3\" class=\"TextInput\"  placeholder=\"Descrio\" rows=\"4\" cols=\"50\" name=\"descricao\"></textarea>\r\n"
 	                    		+ "                        </div>\r\n"
 	                    		+ "                        <div class=\"containerTitleTable\">\r\n"
-	                    		+ "                            <h1 class=\"titleTypeContainerTable\">Escolha o seu pão</h1>\r\n"
+	                    		+ "                            <h1 class=\"titleTypeContainerTable\">Escolha o seu po</h1>\r\n"
 	                    		+ "                        </div>\r\n"
 	                    		+ "                        <div class=\"containerInputSelect\">\r\n"
 	                    		+ "                            <select id=\"SelectPao\" class=\"TextInput\" name=\"tipo\" required>\r\n"
-	                    		+ "                                <option value=\"\">Pão</option>\r\n"
+	                    		+ "                                <option value=\"\">Po</option>\r\n"
 	                    		+ "                            </select>\r\n"
 	                    		+ "                        </div>\r\n"
 	                    		+ "                        <div class=\"containerTitleTable\">\r\n"

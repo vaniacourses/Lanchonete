@@ -58,7 +58,7 @@ public class DaoFuncionarioMutanteConditionalOperatorReplacement1 {
             rs = stmt.executeQuery();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while (!rs.next()){
             
@@ -96,7 +96,7 @@ public class DaoFuncionarioMutanteConditionalOperatorReplacement1 {
             EncryptadorMD5 md5 = new EncryptadorMD5();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while (!rs.next()){    
                 validFuncionario.setUsuario(rs.getString("usuario"));

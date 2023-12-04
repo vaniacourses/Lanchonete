@@ -28,7 +28,7 @@ public class LancheMutanteScalarVariableReplacement1 {
     public void setId_lanche(int id_lanche) {
         this.id_lanche = id_lanche;
     }
-  //Nome é repetido para gets e sets no lugar de Descricao, que também é string.
+  //Nome  repetido para gets e sets no lugar de Descricao, que tambm  string.
     public String getNome() {
         return nome;
     }
@@ -51,7 +51,7 @@ public class LancheMutanteScalarVariableReplacement1 {
         this.valor_venda = valor_venda;
     }
 
-    //Id_lanche é repetido para get e set no lugar de Fg_ativo que também é integer.
+    //Id_lanche  repetido para get e set no lugar de Fg_ativo que tambm  integer.
     public int getFg_ativo() {
         return id_lanche;
     }
@@ -59,7 +59,7 @@ public class LancheMutanteScalarVariableReplacement1 {
         this.fg_ativo = fg_ativo;
     }
    
-    //Valor_venda é repetido para gets e sets de Valor_lanche, que também é double.
+    //Valor_venda  repetido para gets e sets de Valor_lanche, que tambm  double.
     public Double getValor_lanche() {
         return valor_venda;
     }
@@ -68,7 +68,7 @@ public class LancheMutanteScalarVariableReplacement1 {
     }
 
    
-  //Id_lanche é repetido para get e set no lugar de quantidade que também é integer.
+  //Id_lanche  repetido para get e set no lugar de quantidade que tambm  integer.
      public int getQuantidade() {
         return id_lanche;
     }

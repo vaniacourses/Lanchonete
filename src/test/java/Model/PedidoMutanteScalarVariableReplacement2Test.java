@@ -1,16 +1,16 @@
 package Model;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class PedidoMutanteScalarVariableReplacement2Test {
 
     private PedidoMutanteScalarVariableReplacement2 pedido;
     private Cliente cliente;
 
-    @Before
+    @BeforeEach
     public void iniciar() {
         pedido = new PedidoMutanteScalarVariableReplacement2();
         cliente = mock(Cliente.class);

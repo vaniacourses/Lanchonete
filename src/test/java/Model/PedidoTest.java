@@ -1,16 +1,16 @@
 package Model;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class PedidoTest {
 
     private Pedido pedido;
     private Cliente cliente;
 
-    @Before
+    @BeforeEach
     public void iniciar() {
         pedido = new Pedido();
         cliente = mock(Cliente.class);

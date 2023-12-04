@@ -1,7 +1,7 @@
 package Model;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
 public class ClienteMutanteScalarVariableReplacement2Test {

@@ -28,7 +28,7 @@ public class BebidaMutanteScalarVariableReplacement1 {
         this.nome = nome;
     }
     
-    //Nome é repetido para gets e sets de descricao, que também é string.
+    //Nome  repetido para gets e sets de descricao, que tambm  string.
     
     // DESCRICAO
     public String getDescricao() {
@@ -38,7 +38,7 @@ public class BebidaMutanteScalarVariableReplacement1 {
         this.descricao = descricao;
     }
     
-    //id_bebida é repetido para get de quantidade, que também é integer.
+    //id_bebida  repetido para get de quantidade, que tambm  integer.
     // QUANTIDADE
     public int getQuantidade() {
         return id_bebida;
@@ -50,7 +50,7 @@ public class BebidaMutanteScalarVariableReplacement1 {
 
     // VALOR COMPRA
     
-  //Valor_compra é repetido para get de Valor_venda, que também é double.
+  //Valor_compra  repetido para get de Valor_venda, que tambm  double.
     
     public Double getValor_compra() {
         return valor_compra;
@@ -67,7 +67,7 @@ public class BebidaMutanteScalarVariableReplacement1 {
         this.valor_venda = valor_venda;
     }
 
-  //Nome é repetido para gets e sets de Tipo, que também é string. 
+  //Nome  repetido para gets e sets de Tipo, que tambm  string. 
     
     // TIPO
     
@@ -77,7 +77,7 @@ public class BebidaMutanteScalarVariableReplacement1 {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    //id_bebida é repetido para gets e sets de Fg_ativo, que também é string.  
+    //id_bebida  repetido para gets e sets de Fg_ativo, que tambm  string.  
     // FG_ATIVO
     public int getFg_ativo() {
         return id_bebida;

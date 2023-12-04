@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+// -*- coding: utf-8 -*-
 package Model;
 
 /**
@@ -29,7 +30,7 @@ public class RelatorioBebidasMutanteScalarVariableReplacement2 {
         this.idPedido = idPedido;
     }
     
-  //Cliente é repetido para gets e sets no lugar de nomeBebida, que também é string.
+  //Cliente repetido para gets e sets no lugar de nomeBebida, que tambm  string.
 
     public String getCliente() {
         return cliente;
@@ -47,7 +48,7 @@ public class RelatorioBebidasMutanteScalarVariableReplacement2 {
     public void setNomeBebida(String nomeBebida) {
         this.cliente = nomeBebida;
     }
-  // IdPedido é repetido para get e set no lugar de Quantidade que também é integer.
+  // IdPedido  repetido para get e set no lugar de Quantidade que tambm  integer.
     
     
     public int getQuantidade() {
@@ -66,7 +67,7 @@ public class RelatorioBebidasMutanteScalarVariableReplacement2 {
     public void setCustoBebidas(float custoBebidas) {
         this.custoBebidas = custoBebidas;
     }
-  //CustoBebidas é repetido para gets e sets de VendaBebidas,LucroBebidas, TotalCustoBebidas, TotalVendaBebidas, TotalLucroBebidas  que também é float.
+  //CustoBebidas  repetido para gets e sets de VendaBebidas,LucroBebidas, TotalCustoBebidas, TotalVendaBebidas, TotalLucroBebidas  que tambm  float.
 
     
     public float getVendaBebidas() {

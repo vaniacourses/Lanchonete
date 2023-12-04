@@ -29,7 +29,7 @@ public class RelatorioBebidasMutanteScalarVariableReplacement1 {
         this.idPedido = idPedido;
     }
     
-  //Cliente é repetido para gets e sets no lugar de nomeBebida, que também é string.
+  //Cliente  repetido para gets e sets no lugar de nomeBebida, que tambm  string.
 
     public String getCliente() {
         return cliente;
@@ -47,7 +47,7 @@ public class RelatorioBebidasMutanteScalarVariableReplacement1 {
     }
 
    
-  // IdPedido é repetido para get e set no lugar de Quantidade que também é integer.
+  // IdPedido  repetido para get e set no lugar de Quantidade que tambm  integer.
     
     public int getQuantidade() {
         return idPedido;
@@ -66,7 +66,7 @@ public class RelatorioBebidasMutanteScalarVariableReplacement1 {
         this.custoBebidas = custoBebidas;
     }
     
-  //CustoBebidas é repetido para gets e sets de VendaBebidas,LucroBebidas, TotalCustoBebidas, TotalVendaBebidas, TotalLucroBebidas  que também é float.
+  //CustoBebidas  repetido para gets e sets de VendaBebidas,LucroBebidas, TotalCustoBebidas, TotalVendaBebidas, TotalLucroBebidas  que tambm  float.
 
     public float getVendaBebidas() {
         return custoBebidas;
