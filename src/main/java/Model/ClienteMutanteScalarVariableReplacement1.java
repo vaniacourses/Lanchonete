@@ -1,4 +1,5 @@
 package Model;
+//-*- coding: utf-8 -*-
 
 public class ClienteMutanteScalarVariableReplacement1 {
     private int idCliente;
@@ -30,7 +31,7 @@ public class ClienteMutanteScalarVariableReplacement1 {
         this.idCliente = idCliente;
     }
     
-  //Nome é repetido para gets e sets de Sobrenome, Telefone, Usuario, Senha que também é string.
+  //Nome  repetido para gets e sets de Sobrenome, Telefone, Usuario, Senha que tambm  string.
 
     public String getNome() {
         return nome;
@@ -71,7 +72,7 @@ public class ClienteMutanteScalarVariableReplacement1 {
         this.senha = senha;
     }
     
-    //IdCliente é repetido para gets e sets de Fg_ativo, que também é integer.
+    //IdCliente  repetido para gets e sets de Fg_ativo, que tambm  integer.
     
     public int getFgAtivo() {
         return idCliente;

@@ -34,7 +34,7 @@ public class EnderecoMutanteScalarVariableReplacement1 {
         this.id_endereco = id_endereco;
     }
 
-  //Rua é repetido  para gets e sets  no lugar de Bairro que também é string.
+  //Rua  repetido  para gets e sets  no lugar de Bairro que tambm  string.
     
     public String getRua() {
         return rua;
@@ -52,7 +52,7 @@ public class EnderecoMutanteScalarVariableReplacement1 {
     }
 
     
-  //Id_endereco é repetido  no lugar para gets e sets de Numero que também é integer.
+  //Id_endereco  repetido  no lugar para gets e sets de Numero que tambm  integer.
 
     public int getNumero() {
         return id_endereco;
@@ -62,7 +62,7 @@ public class EnderecoMutanteScalarVariableReplacement1 {
         this.numero = numero;
     }
 
-    //Rua é repetido para gets e sets  no lugar de Complemento, Cidade e Estado que também é string.
+    //Rua  repetido para gets e sets  no lugar de Complemento, Cidade e Estado que tambm  string.
     
     public String getComplemento() {
         return rua;

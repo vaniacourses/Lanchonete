@@ -32,7 +32,7 @@ public class DaoFuncionarioMutanteScalarVariableReplacement1 {
             PreparedStatement stmt = conecta.prepareStatement(sql);
             /**
             *
-            * Aqui Nome é repetido no lugar de sobrenome, usuario, senha e cargo que também é uma string.
+            * Aqui Nome  repetido no lugar de sobrenome, usuario, senha e cargo que tambm  uma string.
             */
             stmt.setString(1, funcionario.getNome());
             stmt.setString(2, funcionario.getNome());
@@ -64,7 +64,7 @@ public class DaoFuncionarioMutanteScalarVariableReplacement1 {
             while (rs.next()){
             	/**
                 *
-                * Aqui Nome é repetido no lugar de sobrenome, usuario e senha que também é uma string.
+                * Aqui Nome  repetido no lugar de sobrenome, usuario e senha que tambm  uma string.
                 */
                 funcionarioResultado.setId(rs.getInt("id_funcionario"));
                 funcionarioResultado.setNome(rs.getString("nome"));
@@ -102,7 +102,7 @@ public class DaoFuncionarioMutanteScalarVariableReplacement1 {
             while (rs.next()){    
             	/**
                 *
-                * Aqui Usuário é repetido no lugar de senha que também é uma string.
+                * Aqui Usurio  repetido no lugar de senha que tambm  uma string.
                 */
                 validFuncionario.setUsuario(rs.getString("usuario"));
                 validFuncionario.setUsuario(rs.getString("senha"));

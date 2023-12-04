@@ -73,7 +73,7 @@ public class DaoRelatorioMutanteConditionalOperatorReplacement1 {
             rs = stmt.executeQuery();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while(!rs.next()){
                 RelatorioLanches rl = new RelatorioLanches();
@@ -134,7 +134,7 @@ public class DaoRelatorioMutanteConditionalOperatorReplacement1 {
             rs = stmt.executeQuery();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while(!rs.next()){
                 RelatorioBebidas rb = new RelatorioBebidas();
@@ -192,7 +192,7 @@ public class DaoRelatorioMutanteConditionalOperatorReplacement1 {
             rs = stmt.executeQuery();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while(!rs.next()){
                 RelatorioGastos rg = new RelatorioGastos();

@@ -77,7 +77,7 @@ public class DaoClienteMutanteConditionalOperatorReplacement1 {
             
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while (!rs.next()){
             
@@ -115,7 +115,7 @@ public class DaoClienteMutanteConditionalOperatorReplacement1 {
             rs = stmt.executeQuery();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while (!rs.next()){
             
@@ -150,7 +150,7 @@ public class DaoClienteMutanteConditionalOperatorReplacement1 {
             rs = stmt.executeQuery();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while (!rs.next()){
                 clienteResultado.setIdCliente(rs.getInt(IDCLIENTE));
@@ -183,7 +183,7 @@ public class DaoClienteMutanteConditionalOperatorReplacement1 {
             EncryptadorMD5 md5 = new EncryptadorMD5();
             /**
             *
-            * Mutante onde loop inicia quando a condição não é cumprida.
+            * Mutante onde loop inicia quando a condio no  cumprida.
             */
             while (!rs.next()){    
                 validCliente.setUsuario(rs.getString(USUARIO));

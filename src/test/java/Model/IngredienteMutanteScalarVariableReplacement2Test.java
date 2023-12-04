@@ -1,14 +1,14 @@
 package Model;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
-import org.junit.Before;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class IngredienteMutanteScalarVariableReplacement2Test {
  
 	private IngredienteMutanteScalarVariableReplacement2 ingrediente;
-	@Before
+	@BeforeEach
 	public void criarIngrediente() {
 		ingrediente = new IngredienteMutanteScalarVariableReplacement2();
 	}

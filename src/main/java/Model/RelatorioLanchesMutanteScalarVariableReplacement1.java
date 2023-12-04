@@ -30,7 +30,7 @@ public class RelatorioLanchesMutanteScalarVariableReplacement1 {
     public void setLanche(String lanche) {
         this.lanche = lanche;
     }
-    //Lanche é repetido para gets e sets no lugar de Ingrediente, que também é string.
+    //Lanche  repetido para gets e sets no lugar de Ingrediente, que tambm  string.
     public String getIngrediente() {
         return lanche;
     }
@@ -39,7 +39,7 @@ public class RelatorioLanchesMutanteScalarVariableReplacement1 {
     }
 
    
-    //Lanche é repetido para set no lugar de Quantidade, que  é erroneamente colocada como string.
+    //Lanche  repetido para set no lugar de Quantidade, que   erroneamente colocada como string.
     public int getQuantidade() {
         return quantidade;
     }
@@ -56,9 +56,9 @@ public class RelatorioLanchesMutanteScalarVariableReplacement1 {
     }
  
     
-    //CustoIngrediente é repetido para gets e sets de VendaIngrediente,LucroIngrediente, 
+    //CustoIngrediente  repetido para gets e sets de VendaIngrediente,LucroIngrediente, 
     //CustoTotalIngredientes, VendaTotalIngredientes, LucroTotalIngredeintes, lucroOperacional,  
-    //valorVenda, lucroTotal  que também é float.
+    //valorVenda, lucroTotal  que tambm  float.
 
     public float getVendaIngrediente() {
         return custoIngrediente;

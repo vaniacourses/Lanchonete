@@ -1,16 +1,15 @@
 package Model;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+
 import static org.mockito.Mockito.*;
-
-import org.junit.Before;
-import org.junit.Test;
-
 public class LancheTest {
 
     private Lanche lanche;
 
-    @Before
+    @BeforeEach
     public void iniciar() {
         lanche = new Lanche("X-Salada", 10.0); 
     }
