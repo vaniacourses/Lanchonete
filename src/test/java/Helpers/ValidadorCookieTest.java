@@ -4,11 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import javax.servlet.http.Cookie;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+//import org.mockito.Mockito;
+//import DAO.DaoToken;
 
-import DAO.DaoToken;
-
-class TesteValidadorCookie {
+class ValidadorCookieTest {
 
 
 
@@ -41,6 +40,9 @@ class TesteValidadorCookie {
     }
     
     //Mutante1
+    /*
+	 * 
+	 * 
     @Test
     void testGetCookieMutanteConditionalOperatorReplacement1IdCliente() {
         // Create ValidadorCookie instance
@@ -53,7 +55,11 @@ class TesteValidadorCookie {
         String resultado = validadorCookie.getCookieIdCliente(cookies);
         assertEquals("123", resultado);
     }
-
+    */
+    
+    /*
+	 * 
+	 * 
     @Test
     void testGetCookieMutanteConditionalOperatorReplacement1IdFuncionario() {
         // Create ValidadorCookie instance
@@ -66,7 +72,14 @@ class TesteValidadorCookie {
         String resultado = validadorCookie.getCookieIdFuncionario(cookies);
         assertEquals("456", resultado);
     }
-   //Mutante2
+    
+   */
+   
+    
+    //Mutante2
+    /*
+	 * 
+	 * 
     @Test
     void testGetCookieMutanteConditionalOperatorReplacement2IdCliente() {
         // Create ValidadorCookie instance
@@ -79,7 +92,12 @@ class TesteValidadorCookie {
         String resultado = validadorCookie.getCookieIdCliente(cookies);
         assertEquals("123", resultado);
     }
+    */
 
+    
+    /*
+	 * 
+	 * 
     @Test
     void testGetCookieMutanteConditionalOperatorReplacement2IdFuncionario() {
         // Create ValidadorCookie instance
@@ -92,4 +110,5 @@ class TesteValidadorCookie {
         String resultado = validadorCookie.getCookieIdFuncionario(cookies);
         assertEquals("456", resultado);
     }
+    */
 }

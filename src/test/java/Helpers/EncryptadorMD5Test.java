@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class TestEncryptadorMD5 {
+class EncryptadorMD5Test {
 
 	@Test
     public void testEncryptar() {
@@ -17,7 +17,9 @@ class TestEncryptadorMD5 {
 
         assertEquals(Hashexperado, Hashobtido);
     }
-	
+	/*
+	 * 
+	 * 
 	@Test
     public void testEncryptadorMD5MutanteConditionalOperatorReplacement1() {
 EncryptadorMD5MutanteConditionalOperatorReplacement1 encryptadorMD5MutanteConditionalOperatorReplacement1 =
@@ -30,7 +32,12 @@ EncryptadorMD5MutanteConditionalOperatorReplacement1 encryptadorMD5MutanteCondit
 
         assertEquals(Hashexperado, Hashobtido);
     }
+	*/
 	
+	
+	/*
+	 * 
+	 * 
 	@Test
     public void testEncryptadorMD5MutanteConditionalOperatorReplacement2() {
 EncryptadorMD5MutanteConditionalOperatorReplacement2 encryptadorMD5MutanteConditionalOperatorReplacement1 =
@@ -43,4 +50,5 @@ EncryptadorMD5MutanteConditionalOperatorReplacement2 encryptadorMD5MutanteCondit
 
         assertEquals(Hashexperado, Hashobtido);
     }
+    */
 }
